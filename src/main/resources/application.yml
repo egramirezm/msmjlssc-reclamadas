@@ -78,7 +78,7 @@ spring:
       fail-on-empty-beans: false
   profiles: local
   datasource:
-    url: jdbc:mariadb:failover://10.100.8.166:3306/MAISSCBDQA01?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mariadb://10.100.8.166:3306/MAISSCBDQA01?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: MAISSCBD_USER
     password: M55ACBDI_U534
     driverClassName: org.mariadb.jdbc.Driver
