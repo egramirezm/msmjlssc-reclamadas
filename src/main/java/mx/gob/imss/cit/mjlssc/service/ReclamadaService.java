@@ -17,4 +17,5 @@ public interface ReclamadaService {
 	public ResponseEntity<?> getReclamacionById(Integer idReclamacion) ;
 	public ResponseEntity<?> removeReclamacionById(Integer idReclamacion) ;
 	public ResponseEntity<?> saveReclamas(SsccReclamadaDto ssccReclamadaDto) ;
+	public ResponseEntity<?> findByCveClasAccionReclamada(Integer cveClasAccionReclamada);
 }

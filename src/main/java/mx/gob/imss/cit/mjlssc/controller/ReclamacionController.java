@@ -9,12 +9,10 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.log4j.Log4j2;
 import mx.gob.imss.cit.mjlssc.model.entity.SsccReclamadaDto;
-import mx.gob.imss.cit.mjlssc.service.DelegacionService;
 import mx.gob.imss.cit.mjlssc.service.ReclamadaService;
 
 /***
@@ -33,6 +31,13 @@ public class ReclamacionController {
 	public ResponseEntity<?> getReclamadas() {
 		log.info("Inicio prueba Modulo Juicio Laboral");
 		return reclamadaService.getReclamadas();
+	}
+	
+	@GetMapping("/getReclamadas/{cveClasAccion}")
+	public ResponseEntity<?> getReclamadasByCveClasAccion(@PathVariable Integer cveClasAccion) {
+		log.info("Inicio prueba Modulo Juicio Laboral");
+		log.info(">>>ReclamacionController cveClasAccion : '" + cveClasAccion);
+		return reclamadaService.findByCveClasAccionReclamada(cveClasAccion);
 	}
 	
 	@GetMapping("/getReclamacion/{id}")

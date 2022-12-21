@@ -2,7 +2,7 @@ package mx.gob.imss.cit.mjlssc.utils;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class DataBaseShemaConf {
 
 	/**
